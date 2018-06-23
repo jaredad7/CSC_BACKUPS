@@ -1,0 +1,17 @@
+Know definitions like Optimality, etc.
+
+What is the diference between a set and a sequence?
+
+What is tuple?
+
+Study the logic portion of the PowerPoint.
+
+{x for x in range(10)} -This is list comprehension.
+Try to make a tuple with (x for x in range(10)). This will not work.
+Instead, it creates a generator object.
+
+Set, tuple, list, and dictionary; know them
+
+Learn that lambda bull.
+
+Learn map, reduce, and filter

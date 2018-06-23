@@ -1,0 +1,14 @@
+Objectives:
+Identification of Convert Channels
+Determination of Covert Channel Bandwidth
+Handling Covert Channels, Policies, and Procedures
+
+Definitions:
+Covert Channels are those that use entities not normally viewed as data objects to transfer information from one subject to another.
+Storage Channels involve direct or indirect writing of a storage location, as well as direct or indirect reading from the location.
+Timing Channels involves signaling information by modulating its own system resources, which affects real response time observed by second process.
+
+Noisy vs Noiseless:
+A channel is noiseless if the symbols transmitted by the sender are the same as the symbols received by the reciepient.
+A channel is noisy if this is not the case.
+Noise helps to determine bandwidth.

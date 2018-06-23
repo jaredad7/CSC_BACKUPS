@@ -1,0 +1,4 @@
+Synchronization issues and potentially lower bandwidth
+Inter-packet delay is a typical timing channel over networks.
+This transfers a bit based on whether something happens during a time interval.
+

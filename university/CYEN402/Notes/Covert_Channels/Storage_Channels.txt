@@ -1,0 +1,14 @@
+We have headers in Network packets
+IP and TCP headers
+
+3rd field in IP header is Type of Service 4500 (ipversion, 5*4=20 bytes size, 00 is type of service)
+This field is now rarely used, and usually defaults to 0.
+
+Ip Identification is 16 bits. Used for reassembly of fragments.
+If packets are not going to be fragmented, this field can be used as a channel.
+
+Ip Fragment Offset is 14 bits. 
+If fragmentation is not an issue, this field can be used as a channel.
+
+Ip Flags use 2 bits.
+Tells if we will fragment.

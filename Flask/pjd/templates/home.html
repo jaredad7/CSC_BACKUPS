@@ -1,0 +1,16 @@
+{% extends 'layout.html' %}
+{% block head %}
+	<link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Dancing+Script" />
+{% endblock %}
+{% block content %}
+	<div class="row">
+		<div class="col-md-7">
+			<br><br><br><h1 style='font-family: "Dancing Script";'>Over 30 Years'</h1><br><br>
+			<center><img src="{{ url_for('static', filename='img/tall.jpg') }}"></center>
+		</div>
+		<div class="col-md-4">
+			<center><img src="{{ url_for('static', filename='img/onphone.jpg') }}"></center>
+			<br><br><br><h2>Experience working with individuals and businesses to preserve wealth through tax and estate tax planning.</h2>
+		</div>
+	</div>
+{% endblock %}

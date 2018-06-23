@@ -1,0 +1,11 @@
+Now that you're familiar with Object Oriented Programming, 
+it should be quite simple for you to make a text-based adventure game.
+
+You have the freedomm to do this however you wish, but you should strive
+to meet the following requirements:
+
+1) You should have at least eight locations.
+2) Each location should have a few different actions which can be performed
+3) Your main character needs to have an inventory with items and money
+4) Your main character needs an amount of health
+5) The game should take a new player at least five minutes to complete

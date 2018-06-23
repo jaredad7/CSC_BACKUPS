@@ -1,0 +1,33 @@
+Access Control Methods:
+-Access Control Matrices (Of course, in large systems, matrices will be large)
+-Access Control Lists (The column of the matrix)
+-Capabilities Lists (Rows of the matrix)
+
+List Advantages:
+The object has its own list of users who can access.
+It is easy to determine access to an object.
+Access to an object is easy to revoke.
+
+List Disadvantages:
+Difficult to tell what kinds of access a particular user may have
+Difficult to revoke a user's rights to all objects
+
+Capabilities List Advantages:
+The list contains the access rights of all users.
+Easy to tell what kinds of access a particular user may have
+Easy to revoke a user's rights to all objects
+
+Capabilities List Disadvantages:
+It is difficult to determine access to an object.
+Access to an object is difficult to revoke.
+
+Design Principles; produce a system that can prevent all attacks:
+
+1) Economy of Mechanism - keeping the system as simple as practically possible
+2) Fail-safe Defaults - basing access decisions on permission
+3) Complete Mediation - a user's authority must be checked whenever access is attempted
+4) Open Design - design should not be secret
+5) Separation of Privileges - require two keys to unlock something
+6) Least Privilege - providing the least amount of privilege necessary to complete the task
+7) Least Common Mechanism - minimize dependence or access on common resources
+8) Psychological Acceptability - give user peace of mind via security interface

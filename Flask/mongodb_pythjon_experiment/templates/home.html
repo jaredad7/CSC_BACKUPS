@@ -1,0 +1,15 @@
+{% extends "layout.html" %}
+{% block heading %}
+	<h1>My App</h1>
+{% endblock %}
+{% block main %}
+	<p>Enter some data below:</p>
+	<form action="{{ url_for('save') }}" method='POST'>
+		<input type="text" name="data">
+		<input type="submit" text="Save">
+	</form>
+	{% if saved == True %}
+		<p>Saved!</p>
+	{% endif %}
+	<a href="/display_data">Display Data!</a>
+{% endblock %}

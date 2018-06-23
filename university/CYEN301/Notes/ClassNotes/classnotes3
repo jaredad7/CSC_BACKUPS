@@ -1,0 +1,51 @@
+3/31/14
+
+Cyberstorm: locking down the system
+Use eth0 to get an ip address
+One will likely automatically appear because of DHCP service.
+
+VirtualBox component NAT:
+
+Allows VM's to connect to one another.
+We do not want to do this.
+bridge adapter network (works for a VM as if an ethernet cable was plugged into it. Gives the VM a unique ip address).
+
+How to allow access to VM's but not host?
+Just shutdown eht0 (if this is the host)
+$ ifconfig eth0 down 
+#or
+$ ifconfig eth0 0.0.0.0 down (clear ip address and shutdown network access in host)
+
+How to setup by Cyberstorm rules:
+Only 10.x.x.x
+ifconfig some VM internet
+$ ifconfig eth0 10.1.13.14 netmask 255.255.0.0
+
+subnet size (for netmask)
+constant 255
+dynamic 0
+
+On debian:
+edit /etc/network/interface to do these things automatically
+On Redhat:
+edit /etc/networking/somefiles to do these things automatically (Gourd doesn't remember)
+
+**********************************************************************************************************
+Malware:
+
+Virus: Self-replicating
+Worm: Self-propagating (can get out through the network)
+These two have sort of merged today. Virus has essentially become a subset of Worm.
+
+Bacteria: Foreign entity that grows and eats memory (fork bomb)
+Trojan: What the name implies, a trojan horse, or seemingly passive application with malicious behaviour.
+Rootkit: Injects at a driver level, to alter driver codes.
+Spyware: Sends information about what you do (keyloggers).
+Adware: Advertises things (toolbar)
+Spam: Unwanted mail
+Phishing: Targeted spam
+
+***********************************************************************************************************
+Honeypots
+A machine set up specifically for vulnerabilities to attract hackers.
+We can learn about hackers from these machines.

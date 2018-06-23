@@ -1,0 +1,91 @@
+4/7/14
+
+Xor Encryption:
+
+Three parts:
+Plaintext
+Key
+Ciphertext
+
+Xor the Plaintext with the key to get the Ciphertext
+plain: 10110101
+key:   01111010
+ciph:  11001111
+
+to undo, xor the cipher with the key
+
+11001111
+01111010
+10110101
+
+If the key is all zeroes, then the plaintext and ciphertext are equal.
+
+********************************************************************************************
+ASCII
+
+Was 7-bit nuber (now 8-bit for extra characters)
+A map of binary numbers to regular characters:
+a = 96 (binary representation)
+Z = 90 " "
+5 = 53 " "
+etc...
+
+********************************************************************************************
+Base-64
+
+base10 = decimal 0-9
+base16 = hexadecimal 0-9, A-F
+base2 = binary 0-1
+base8 = octal 0-7
+base64 = Base-64 [A-Z a-z 0-9 +/] (where A = 0 and / = 63)
+
+Encoding information in Base-64 is just a remapping of the information to the above set.
+
+example: encode the text 'Wit' into Base-64
+ascii values: W = 87
+	      i = 105
+	      t = 116
+
+	W	 i	  t
+binary: 01010111 01101001 01110100
+break these into 6ths
+
+010101 110110 100101 110100
+21	54	37	52
+V	2	l	0
+
+But what if they don't line up?
+Encode Wits:
+
+	W	 i	  t	   s
+binary: 01010111 01101001 01110100 01110011
+
+010101 110110 100101 110100 011100 110000
+21	54	37	52   c      w		(we pad it with 0's until the end of the binary)
+V	2	l	0    c      w
+
+***********************************************************************************************************
+Ciphers
+
+Caesar - shift cipher (ROT13, but with any digit afterwards)
+To crack this encryption, find the shift (is there anything I recognize at a shift of 1? How about 2?)
+
+Coke-Can (scytale):
+Take the paper, and wrap it around something cylindrical.
+Write the message on the paper.
+Unroll it, and you have some different order of words.
+
+***********************************************************************************************************
+Digital Signatures
+
+Allow us to determine the authenticity of a message (a form of asymmetric cryptography).
+
+Symmetric encryption - we use a shared key, AES, serpant, blowfish, and twofish are symmetric encryptions
+Asymmetric encryption - public key (a public key is a one-way encryption, which cannot undo itself; only the private key can undo the public key encryption)
+RSA, DES, and diffie-Hellman are public keys
+
+***********************************************************************************************************
+Hashing
+
+A hash is a one-way function which can take variable-size input and give a fixed-length output.
+Collisions occur when two pieces of input data give the same output. This is bad, and is a huge potential weakness of hashing.

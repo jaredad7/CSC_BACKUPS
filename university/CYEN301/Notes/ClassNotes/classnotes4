@@ -1,0 +1,36 @@
+4/2/14
+
+Threat avoidance and Threat detection
+
+IDS - Intrusion Detection System
+IPS - Intrusion Prevention System
+IDPS - Intrusion Dection&Prevention System
+
+dection - detecting that someone has gotten into the system
+prevention - limiting what a detected intruder can do on the system (like "gracefully degrading" a service)
+
+Threat avoidance is more important than detection/prevention, as avoidance is the stopping of a threat all-together.
+We can do this for specific kinds of attacks, but it is difficult(nearly impossible) to do this for all possible attacks across the board.
+
+Threats we may be able to avoid:
+Beaconing Malware (which would send out a quick burst of information to a hacker to get your ip etc.) Can solve using an Authentication switch.
+At the SNIC, find out which process is running, and hash it as a process.
+The switch contains a list of authorized processes which may send outbound packets.
+It will respond with whether or not the process is authorized.
+If it is not, SNIC drops the packets, and they never leave the system.
+Authorization is only required for the outbound traffic.
+LAN traffic is not checked.
+Open ports (connect remotely) Solved with port knocking (in ssh)
+
+***********************************************************************************************************************
+Defense in Depth - Addding layers of security around the system.
+Defense in Breadth -  Adding different kinds of securities for different kinds of attacks.
+
+PDR^3 - Prevent(avoid) Detect Respond Recover Restore
+Prevent
+If I can't prevent, Detect and then respond
+If responding fails (or is impossible), Recover
+If damage is so bad that I can't recover, then, I can hopefully restore with a backup.
+
+***********************************************************************************************************************
+Most hackers are script kitties.

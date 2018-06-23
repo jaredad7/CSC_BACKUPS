@@ -1,0 +1,42 @@
+4/25/2014
+cryptology
+cryptography
+cryptonalysis
+
+letter sub ciphers:
+cryptograms - scramble letters "randomly"
+alphabet shift cipher - shifts like ROT13
+sliding shift cipher - encrypt each letter in the set {0,1,2...,n} with a shift corresponding to its location in the set
+
+vigenere cipher:
+sliding shift adding a key
+
+If message is HELLO WORLD and key is BAD and slide is:
+ABCDEFGHIJKLMNOPQRSTUVWXYZ
+BCDEFGHIJKLMNOPQRSTUVWXYZA
+CDEFGHIJKLMNOPQRSTUVWXYZAB
+DEFGHIJKLMNOPQRSTUVWXYZABC
+
+HELLO WORLD message
+BADBA DBADB key
+IEOMO ZPROE
+
+Go to key line, choose encrypted letter, go up to A line, choose original value
+MATHEMATICALLY:
+Ci = (Pi+Ki)%26 if in array
+For ascii representation:
+Ci=(Pi-65+Ki-65)%26+65
+Pi=abs{(Ci-Ki)%26} || Pi=(26+Ci-Ki)%26
+
+Timelock:
+Needs a t=0 (epoch time)
+Needs a current time (syncronized between the two machnies)
+
+1) Calculate time elapsed in seconds since some epoch time
+2) Calculate MD5(MD5(e)) where e=time elapsed (current time - epoch time)
+3) Extract [A-Fa-f]{2} left-to-right followed by [0-9]{2} right-to-left
+
+Some MD5 Hash: 03AGFDERYTE&@(#%&&@(83470147381389A
+Go right: get first A-Fa-f = AF
+Go left: get first 0-9 = 98
+Appended to end of password.

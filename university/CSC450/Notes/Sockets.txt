@@ -1,0 +1,80 @@
+A host has at least one network-based application, but could have more.
+
+PAN - Personal Area Network
+LAN - Local Area Network
+MAN - Metropolitan Area Network
+WAN - Wide Area Network
+Accross the planet is the internet
+
+A network includes hosts, routers, links, routers, etc.
+
+Key interfaces:
+Between Apps and Network (eg. sockets)
+Between Network Components (eg. ping)
+
+
+Streams reliably send data, while datagrams do not (datagrams are typically packets).
+
+Sockets let apps attach  to the local network at different ports.
+Port numbers are for addressing.
+
+Socket Commands:
+Socket - create new socket
+Bind - associate local address with a port
+Listen - announce willingness to accept incoming connection
+Accept - passively establish an incoming connection
+Connect - attempt to establish a new connection
+Send - send data to an address
+Receive - receive incoming data
+Close - close a connection
+
+Client program outline:
+socket() //create socket
+getaddrinfo() //get server and port
+connect() //connect to a server
+...
+send()
+receive()
+...
+close()
+
+Server program outline:
+socket()
+getaddrinfo() //for port on this host
+bind() //associate port with socket
+listen() //prepare to accept connection
+accept() //wait for a connection
+...
+recv()
+send()
+...
+close()
+
+UDP is unreliable datagrams
+TCP is reliable data streams
+
+TCP:
+Make connections
+Bytes are delivered once, reliably, and in order
+Arbitrary length content
+Flow control matches sender to receiver
+Congestion control mateches sender to network
+
+UDP:
+Packets (datagrams)
+Messages may be lost, reordered, or duplicated
+Limited message size
+Can send regardless of receiver data
+Can send regardless of network state
+
+Servers typically bind to "well-known ports" < 1024
+Clients are given "ephemeral" ports
+
+Transport Layer
+SSL - Secure Socket Layer
+TLS - Transport Layer Security
+HTTPS
+SSH - Secure Shell
+
+SSL/TLS provides crypto-negotiation, key exchange, and privacy
+

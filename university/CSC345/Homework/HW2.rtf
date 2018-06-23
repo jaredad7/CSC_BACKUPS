@@ -1,0 +1,73 @@
+{\rtf1\ansi\deff3\adeflang1025
+{\fonttbl{\f0\froman\fprq2\fcharset0 Times New Roman;}{\f1\froman\fprq2\fcharset2 Symbol;}{\f2\fswiss\fprq2\fcharset0 Arial;}{\f3\froman\fprq2\fcharset0 Liberation Serif{\*\falt Times New Roman};}{\f4\fswiss\fprq2\fcharset0 Liberation Sans{\*\falt Arial};}{\f5\fnil\fprq2\fcharset0 WenQuanYi Zen Hei Sharp;}{\f6\fnil\fprq2\fcharset0 Lohit Devanagari;}{\f7\fnil\fprq0\fcharset1 Lohit Devanagari;}}
+{\colortbl;\red0\green0\blue0;\red128\green128\blue128;}
+{\stylesheet{\s0\snext0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\kerning1\dbch\af5\langfe2052\dbch\af6\afs24\alang1081\loch\f3\fs24\lang1033 Normal;}
+{\s15\sbasedon0\snext16\sb240\sa120\keepn\dbch\af5\dbch\af6\afs28\loch\f4\fs28 Heading;}
+{\s16\sbasedon0\snext16\sl288\slmult1\sb0\sa140 Text Body;}
+{\s17\sbasedon16\snext17\sl288\slmult1\sb0\sa140\dbch\af7 List;}
+{\s18\sbasedon0\snext18\sb120\sa120\noline\i\dbch\af7\afs24\ai\fs24 Caption;}
+{\s19\sbasedon0\snext19\noline\dbch\af7 Index;}
+}{\info{\creatim\yr2014\mo5\dy14\hr22\min48}{\revtim\yr0\mo0\dy0\hr0\min0}{\printim\yr0\mo0\dy0\hr0\min0}{\comment LibreOffice}{\vern67240707}}\deftab709
+\viewscale100
+{\*\pgdsctbl
+{\pgdsc0\pgdscuse451\pgwsxn12240\pghsxn15840\marglsxn1134\margrsxn1134\margtsxn1134\margbsxn1134\pgdscnxt0 Default Style;}}
+\formshade\paperh15840\paperw12240\margl1134\margr1134\margt1134\margb1134\sectd\sbknone\sectunlocked1\pgndec\pgwsxn12240\pghsxn15840\marglsxn1134\margrsxn1134\margtsxn1134\margbsxn1134\ftnbj\ftnstart1\ftnrstcont\ftnnar\aenddoc\aftnrstcont\aftnstart1\aftnnrlc
+\pgndec\pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\kerning1\dbch\af5\langfe2052\dbch\af6\afs24\alang1081\loch\f3\fs24\lang1033{\rtlch \ltrch\loch
+2) Implementing synchronization primitives by disabling interrupts in a single-processor system is not appropriate because each process will be required to finish before another can begin. In other words, this would defeat the purpose of multi-threading because context switching of processes could not occur.}
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\kerning1\dbch\af5\langfe2052\dbch\af6\afs24\alang1081\loch\f3\fs24\lang1033\rtlch \ltrch\loch
+
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\kerning1\dbch\af5\langfe2052\dbch\af6\afs24\alang1081\loch\f3\fs24\lang1033{\rtlch \ltrch\loch
+3) In the given example, there will be a deadlock because P1 will get Q and wait for S, which P0 must release. However, P0 needs Q before it releases. Since P0 is waiting on Q, which is controlled by P1, and P1 is waiting on S, which is controlled by P0, there will be a deadlock. The solution to this problem is as follows:}
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\kerning1\dbch\af5\langfe2052\dbch\af6\afs24\alang1081\loch\f3\fs24\lang1033\rtlch \ltrch\loch
+
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\kerning1\dbch\af5\langfe2052\dbch\af6\afs24\alang1081\loch\f3\fs24\lang1033{\rtlch \ltrch\loch
+P0\tab \tab \tab P1}
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\kerning1\dbch\af5\langfe2052\dbch\af6\afs24\alang1081\loch\f3\fs24\lang1033{\rtlch \ltrch\loch
+wait(Q)\tab \tab wait(Q)}
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\kerning1\dbch\af5\langfe2052\dbch\af6\afs24\alang1081\loch\f3\fs24\lang1033{\rtlch \ltrch\loch
+wait(S)\tab \tab \tab wait(S)}
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\kerning1\dbch\af5\langfe2052\dbch\af6\afs24\alang1081\loch\f3\fs24\lang1033{\rtlch \ltrch\loch
+:\tab \tab \tab :}
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\kerning1\dbch\af5\langfe2052\dbch\af6\afs24\alang1081\loch\f3\fs24\lang1033{\rtlch \ltrch\loch
+:\tab \tab \tab :}
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\kerning1\dbch\af5\langfe2052\dbch\af6\afs24\alang1081\loch\f3\fs24\lang1033{\rtlch \ltrch\loch
+signal(Q)\tab \tab signal(Q)}
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\kerning1\dbch\af5\langfe2052\dbch\af6\afs24\alang1081\loch\f3\fs24\lang1033{\rtlch \ltrch\loch
+signal(S)\tab \tab signal(S)}
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\kerning1\dbch\af5\langfe2052\dbch\af6\afs24\alang1081\loch\f3\fs24\lang1033\rtlch \ltrch\loch
+
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\kerning1\dbch\af5\langfe2052\dbch\af6\afs24\alang1081\loch\f3\fs24\lang1033{\rtlch \ltrch\loch
+Since each process requests the resources IN THE SAME ORDER, neither process can ever be waiting on a resource another process controls while also holding a resource that the other process needs in order to execute and release its own resources.}
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\kerning1\dbch\af5\langfe2052\dbch\af6\afs24\alang1081\loch\f3\fs24\lang1033\rtlch \ltrch\loch
+
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\kerning1\dbch\af5\langfe2052\dbch\af6\afs24\alang1081\loch\f3\fs24\lang1033{\rtlch \ltrch\loch
+4) The dining philosophers problem does indeed meet the four conditions necessary for deadlock.}
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\kerning1\dbch\af5\langfe2052\dbch\af6\afs24\alang1081\loch\f3\fs24\lang1033{\rtlch \ltrch\loch
+\tab i) There is mutual exclusion involved. That is, only one philosopher can make use of any given chopstick at any one particular time.}
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\kerning1\dbch\af5\langfe2052\dbch\af6\afs24\alang1081\loch\f3\fs24\lang1033{\rtlch \ltrch\loch
+\tab ii) There is a wait/hold condition. That is, the philosophers control their own chopstick while waiting for the other and while eating, thus making it impossible for others which require their chopstick to perform any eating actions.}
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\kerning1\dbch\af5\langfe2052\dbch\af6\afs24\alang1081\loch\f3\fs24\lang1033{\rtlch \ltrch\loch
+\tab iii) There is no removal of resources from the philosophers: no pre-emption}
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\kerning1\dbch\af5\langfe2052\dbch\af6\afs24\alang1081\loch\f3\fs24\lang1033{\rtlch \ltrch\loch
+\tab iv) There is a circular pattern in that the last philosopher must use a chopstick which also is used by the first philosopher, completing the chain.}
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\kerning1\dbch\af5\langfe2052\dbch\af6\afs24\alang1081\loch\f3\fs24\lang1033\rtlch \ltrch\loch
+
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\kerning1\dbch\af5\langfe2052\dbch\af6\afs24\alang1081\loch\f3\fs24\lang1033{\rtlch \ltrch\loch
+The deadlocks involved here could be most easily avoided here by changing the order in which some processes request resources. As seen in number 3, when the processes that request resources request those resources in the same order, there can be no deadlock. So, if the order (left-right or right-left) of picking up chopsticks were inverted on every-other philosopher, this would eliminate the hold condition, as some philosopher would necessarily get both of his chopsticks first, then put them down, allowing others use them.}
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\kerning1\dbch\af5\langfe2052\dbch\af6\afs24\alang1081\loch\f3\fs24\lang1033\rtlch \ltrch\loch
+
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\kerning1\dbch\af5\langfe2052\dbch\af6\afs24\alang1081\loch\f3\fs24\lang1033{\rtlch \ltrch\loch
+5) There is a deadlock between P1 and P3 because they create a chain, which means that they will request resource which they both need, but neither will be able to continue and then release them, so deadlock will occur.}
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\kerning1\dbch\af5\langfe2052\dbch\af6\afs24\alang1081\loch\f3\fs24\lang1033\rtlch \ltrch\loch
+
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\kerning1\dbch\af5\langfe2052\dbch\af6\afs24\alang1081\loch\f3\fs24\lang1033{\rtlch \ltrch\loch
+6)}
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\kerning1\dbch\af5\langfe2052\dbch\af6\afs24\alang1081\loch\f3\fs24\lang1033\rtlch \ltrch\loch
+
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\kerning1\dbch\af5\langfe2052\dbch\af6\afs24\alang1081\loch\f3\fs24\lang1033{\rtlch \ltrch\loch
+a) Contiguous systems will contain external fragmentation because they require memory to fit into full-sized blocks. When certain blocks of memory are removed, they leave holes, which are later filled by other blocks, which causes smaller, less-useful holes. These small holes will often go to waste. Because paging systems are virtualized in such a way that contiguous memory is unecessary, they will have very little if any external fragmentation.}
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\kerning1\dbch\af5\langfe2052\dbch\af6\afs24\alang1081\loch\f3\fs24\lang1033\rtlch \ltrch\loch
+
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\kerning1\dbch\af5\langfe2052\dbch\af6\afs24\alang1081\loch\f3\fs24\lang1033{\rtlch \ltrch\loch
+b) Paging systems will cause a higher internal fragmentation than contiguous-memory systems, since pages must be of a certain size, and this size is fixed. Contiguous systems may still have internal fragmentation, but it will be much less.}
+\par }

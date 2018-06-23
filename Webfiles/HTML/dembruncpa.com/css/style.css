@@ -1,0 +1,187 @@
+@charset "utf-8";
+body {
+	background-color: #FFFFFF;
+}
+#home {
+	background-image: url(../images/home.jpg);
+	width: 800px;
+	height: 677px;
+	margin-right: auto;
+	margin-left: auto;
+	margin-top: 0px;
+	margin-bottom: 0px;
+	padding: 0px;
+	background-repeat: no-repeat;
+}
+#biocontent {
+	width: 300px;
+	float: right;
+	padding-right: 70px;
+	font-family: Calibri;
+	font-size: 15px;
+	clear: right;
+	padding-top: 62px;
+}
+
+#header {
+	color: #666666;
+	font-family: Calibri;
+	font-size: 12px;
+	text-align: right;
+	padding-right: 55px;
+	padding-top: 50px;
+}
+
+#services {
+	background-image: url(../images/services.jpg);
+	background-repeat: no-repeat;
+	width: 800px;
+	margin-top: 0px;
+	margin-right: auto;
+	margin-bottom: 0px;
+	margin-left: auto;
+	height: 677px;
+}
+#bio #images {
+	padding-top: 62px;
+	padding-right: 0px;
+	padding-bottom: 0px;
+	float: left;
+	padding-left: 150px;
+}
+
+#biocontent p {
+	text-align: left;
+	white-space: nowrap;
+	font-family: Calibri;
+	font-size: 13px;
+	font-weight: bold;
+}
+.bioname {
+	font-family: Calibri;
+	font-weight: bold;
+	color: #680001;
+}
+
+#bio {
+	background-image: url(../images/bio.jpg);
+	background-repeat: no-repeat;
+	width: 800px;
+	margin-top: 0px;
+	margin-right: auto;
+	margin-bottom: 0px;
+	margin-left: auto;
+	height: 1394px;
+}
+
+
+#nav  {
+	width: 120px;
+	height: 150px;
+	margin-top: 90px;
+	margin-left: 60px;
+	float: left;
+}
+#nav  ul  {
+	list-style-type: none;
+	padding: 0px;
+}
+#nav  a  {
+	font-family: Calibri;
+	color: #FFFFFF;
+	text-decoration: none;
+}
+#nav  a:hover  {
+	font-weight: bold;
+	text-decoration: underline;
+}
+#homecontent {
+	float: right;
+	padding-top: 365px;
+	font-family: Calibri;
+	font-size: 18px;
+	padding-right: 75px;
+	font-style: italic;
+	font-weight: bold;
+}
+
+#contact {
+	background-image: url(../images/contact.jpg);
+	background-repeat: no-repeat;
+	width: 800px;
+	margin-top: 0px;
+	margin-right: auto;
+	margin-bottom: 0px;
+	margin-left: auto;
+	height: 677px;
+}
+#servicescontent {
+	float: right;
+	font-family: Calibri;
+	font-size: 12px;
+	width: 300px;
+	padding-right: 55px;
+	padding-top: 75px;
+	font-weight: bold;
+}
+.bold {
+	font-weight: bold;
+}
+.title {
+	font-style: italic;
+	font-weight: bold;
+}
+#contactcontent {
+	float: right;
+	width: 350px;
+	padding-right: 0px;
+	padding-top: 75px;
+	font-family: Calibri;
+	font-size: 13px;
+}
+
+#services #servicescontent ul {
+	list-style-type: square;
+}
+#services #servicescontent li {
+	list-style-type: square;
+	border-bottom-width: medium;
+	border-bottom-style: solid;
+	border-bottom-color: #CCCCCC;
+}
+#taxtimecontent {
+	width: 400px;
+	float: right;
+	padding-right: 70px;
+	font-family: Calibri;
+	font-size: 15px;
+	clear: right;
+	overflow-y: scroll;
+	overflow-x: hidden;
+	height: 1100px;
+	margin-top: 30px;
+}
+#bio #taxtimecontent h1{
+	color: rgba(137,18,14,1);
+	text-align: center;
+}
+#bio #taxtimecontent h2 {
+	color: rgba(111,31,21,1);
+	font-style: italic;
+	clear: both;
+}
+#bio #taxtimecontent p a img {
+	border-top-width: 0px;
+	border-right-width: 0px;
+	border-bottom-width: 0px;
+	border-left-width: 0px;
+	border-top-style: 0;
+	border-right-style: 0;
+	border-bottom-style: 0;
+	border-left-style: 0;
+	padding: 5px;
+	opacity: .7;
+}
+#bio #taxtimecontent p a img:hover {
+	opacity: 1;
+}

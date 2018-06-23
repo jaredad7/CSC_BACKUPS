@@ -1,0 +1,3 @@
+The sizes of a few different types
+Float: 4 Double: 8 Int: 4
+Long: 8 Short: 2 Char: 4

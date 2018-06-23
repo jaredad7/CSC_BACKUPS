@@ -1,0 +1,55 @@
+Script started on Tue 25 Feb 2014 12:14:28 AM CST
+[01;32mjared@jared-tosh[01;34m ~/CSC_CYEN/university/CSC222/Programs/Cprogs/TechShell $[00m ./techsh 
+Welcome to Tech Shell, the greatest shell at Tech!
+
+/home/jared/CSC_CYEN/university/CSC222/Programs/Cprogs/TechShell & cd
+/home & cd jared/CSC_CYEN
+/home/jared/CSC_CYEN & cd nofile
+cd: : No such file or directory
+/home/jared/CSC_CYEN & pwd
+/home/jared/CSC_CYEN
+/home/jared/CSC_CYEN & ls
+cpp  java  python  ShellScript	university  Webfiles
+/home/jared/CSC_CYEN & ls -la
+total 32
+drwxr-xr-x  8 jared jared 4096 Feb  8 14:57 .
+drwxr-xr-x 50 jared jared 4096 Feb 22 22:36 ..
+drwxr-xr-x  7 jared jared 4096 Feb  2 16:59 cpp
+drwxr-xr-x  5 jared jared 4096 Feb 20 01:30 java
+drwxr-xr-x  4 jared jared 4096 Feb  8 17:50 python
+drwxr-xr-x  2 jared jared 4096 Feb  6 10:17 ShellScript
+drwxr-xr-x  4 jared jared 4096 Jan 28 05:29 university
+drwxr-xr-x  3 jared jared 4096 Jan 23 13:39 Webfiles
+/home/jared/CSC_CYEN & nocommanddonothing
+/home/jared/CSC_CYEN & ls > Text.out
+/home/jared/CSC_CYEN & cat Text	.out
+cpp
+java
+python
+ShellScript
+Text.out
+university
+Webfiles
+/home/jared/CSC_CYEN & wc < Text.out
+ 7  7 57
+/home/jared/CSC_CYEN & ls >> Text.out
+/home/jared/CSC_CYEN & cat Text.out
+cpp
+java
+python
+ShellScript
+Text.out
+university
+Webfiles
+cpp
+java
+python
+ShellScript
+Text.out
+university
+Webfiles
+/home/jared/CSC_CYEN & exit
+[01;32mjared@jared-tosh[01;34m ~/CSC_CYEN/university/CSC222/Programs/Cprogs/TechShell $[00m exit
+exit
+
+Script done on Tue 25 Feb 2014 12:16:47 AM CST

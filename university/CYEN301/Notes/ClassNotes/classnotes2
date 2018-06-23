@@ -1,0 +1,21 @@
+3/19/14
+
+Some useful commands for doing reconnaissance are:
+ping sweep
+nmap (port scanning)
+airmon; tcpdump; wireshanck (network sniffing)
+netcat
+
+
+ACK SYN-ACK ACK
+
+This above piece is a primary conversation that happens between computers before packets are sent, in which the sender requests permission to send.
+A port scan may be used to check what is listening on the port, even what version or the OS running.
+Milworm and metasploit have lists of known exploits and weaknesses of systems.
+
+Triad of defensive actions:
+1) patch updates
+2) malware protection
+3) firewall
+
+Threat avoidance

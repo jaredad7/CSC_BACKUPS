@@ -1,0 +1,47 @@
+Server and CLient communicate over a network via a socket API.
+A socket is an intermediate interface for network ports, which would exist between the TCP/IP and Application layers.
+
+HTTP caching and proxies:
+Enabling content reuse
+
+Web Caching:
+The purpose of caching is to store some amount of information to speed up connnections.
+Users often revisit webpages. THere is a big save in overhead from reusing a local copy.
+-Determining relevance:
+-Locally determine that the copy is still valid.
+-Base this on expiry information.
+-Could also use a heuristic approach to guess.
+-Content is then available much more quickly.
+Revalidating:
+-We need to revalidate with the server.
+-Based on timestamp of copy.
+-Or, could be based on content of copy.
+-Content is then available after about 1 RTT (Request Transmit Time)
+
+Web Proxies:
+Place intermediary between pool of clients and external web servers:
+-Benefits for clients include greater caching and security checking
+-Organizational access policies are also provided
+Proxy Caching:
+-Clients Benefit from larger, shared cache
+-Benefits limited by secure or dynamic content, as well as "long tail"
+How it works:
+-Client contacts proxy, which then contacts server
+-The proxy will hold a cache for all clients on the network
+
+A webpagetest can tell us where large overheads exist in loading a webpage.
+
+Recent work to reduce PLT:
+-Better use of the network
+-Better content structures
+-Giving modified version of page based on device
+
+HTTP improvements:
+-Multiplexed HTTP requests on one TCP connection
+-Client priorities
+-Others
+
+Observation:
+-The way pages are written affects how quickly they load
+
+Apache will use the mod_pagespeed extension to re-write pages "on the fly"

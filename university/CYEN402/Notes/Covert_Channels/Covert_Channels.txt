@@ -1,0 +1,4 @@
+A channel is a means of communication.
+A covert channel is a channel that users are unauthorized to use.
+A side channel is an unintentionally opened channel.
+Metapferography is the art of hiding a message in the carrier.

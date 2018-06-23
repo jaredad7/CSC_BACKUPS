@@ -1,0 +1,57 @@
+4/9/14
+
+MD5
+Hashes to a 32-bit number (not good for security, since it has many vulnerabilities)
+Good for checksums.
+
+Four cycles, which are used to separate the bits into four groups using And, Or, Xor
+
+*******************************************************************************************************
+RSA
+Asymmetric encryption system (two keys, public and private)
+
+First, generate public key and private key.
+1) Choose two primes, P and Q
+ex: P = 11, Q = 13
+2) Calculate n=P*Q
+n=143
+3) Randomly select an odd number, e, such that 1 < e < phi(n) totient function
+The totient function is a count of the numbers <= n that are relatively prime to n
+(Relatively prime means I don't share factors with that number)
+So, 1 < e < 120, let's say e = 7
+4)Compute d = e^-1(mod phi(n)) by Euclidean Algorithm (mod is numerical inverse of)
+so, d = 7^-1(mod 120)
+d is the inverse of 7 mod 120
+7d = 1(mod 120)
+Euclidean Algorithm gives me s ant t
+t = -17
+It is negative, so it cannot be used, so add it back to 120
+d = 103
+If the gcd (a,b) = r, then there eists 2 ints, s and t, such that s*a + t*b = r
+Reversing the Euclidean Algorithm yeilds these.
+"""
+Euclidean Algorithm:
+mod gives us the greatest common divisor of each number
+to find gcd(81, 57) 81 = 1(57)+24
+57 = 2(24)+9
+24 = 2(9)+6
+9 = 1(6)+3
+6 = 2(3)+0
+so, the gcd is 3, whatever is in last parenthesis
+"""
+"""
+Reversing the Euclidean Algorithm:
+Rewrite the last equation
+3 = 9 - 1(6) = 9 - 1(24 - 2(9) = 3(9) - 1(24) = 3(57 - 2(24)) - 1(24) = 3(57) - 7(24) = 3(57) - 7(81 - 1(57)) = 10(57) - 7(81)
+"""
+
+gcd(120, 7) = 1
+
+1 = 120 - 17(7)
+so, d = 103
+
+publish (n, e) -> public key
+keep (n, d) -> private key
+so, public key = (143, 7) and private key = (143, 103)
+message m = 3, then cipher c = m^e % n
+for decryption, dec = c^d % n

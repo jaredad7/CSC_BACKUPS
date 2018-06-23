@@ -1,0 +1,59 @@
+/* PJD Maroon: #680001 */
+
+/*****HEADING*****/
+#heading a
+{
+	color: #680001
+}
+
+#heading nav
+{
+	background-color: #DFDDDD
+}
+
+/*****CONTENT*****/
+#content
+{
+	background: #680001;
+	padding-left: 1em;
+	/*height:100vh;*/
+}
+
+#content p, h1, h2
+{
+	color: white;
+	text-shadow: .5px .5px #223322;
+}
+
+#content h1
+{
+	font-size: 58pt;
+}
+
+#content h1
+{
+	text-align: center;
+}
+
+#content #row
+{
+	padding-top: 2em;
+}
+
+#content img
+{
+	padding-top: 1em;
+	padding-bottom: 1em;
+}
+
+/*****FOOTING*****/
+#footing img
+{
+	float: left;
+}
+
+#footing p
+{
+	text-align: right;
+	padding-top: 3em;
+}

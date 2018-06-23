@@ -1,0 +1,15 @@
+Information Flow is some policy designed to preserve confidentiality and/or integrity of our data.
+Prevent the flow of information to those not authorized to receive it.
+
+Multi-Level Security:
+Want to allow information to reach those with authorization to read it
+Allow information flows between users that have sufficient security clearance
+Prevent flows to those that do not have sufficient clearance
+If we can identify all possible flows, then these policies can be implemented to preserve security
+If we can't identify a possible flow, then there is the potential that information will flow to an unauthorized user.
+
+Some information flow channels:
+Overt Channels - Channels over which a user is authorized to communicate
+Covert Channels - Channels over which a user is unauthorized to communicate (violates a policy)
+
+

@@ -1,0 +1,4 @@
+Preorder: VLR
+Inorder: LVR
+Postorder: LRV
+Reverse Inorder: RVL

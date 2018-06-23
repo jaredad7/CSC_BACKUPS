@@ -1,0 +1,42 @@
+#include <iostream>
+#include <fstream>
+#include <cstring>
+
+using namespace std;
+
+//Will run through all possible rotations, 1-127, for normal ascii characters
+int main(int argc, char **argv)
+{
+	cout << "Note, you must name your file 'rotfile'" << endl;
+	//Open File
+	ifstream File("rotfile");
+
+	//Get the length of the file
+	File.seekg (0, File.end);
+    	int length = File.tellg();
+    	File.seekg (0, File.beg);
+
+	//create char buffer
+	char input[length];
+
+	//get input from file
+	File.read(input, length);
+	
+	//Run main algorithm
+	for(int i = 87; i < 128; i++)
+	{
+		for(int j = 0; j < length; j++)
+		{
+			char out;
+			//Get only standard characters. Ignore those characters above 127 ascii value
+			if((input[j]+i) < 128)
+				out = (input[j]+i);
+			else
+				out = (input[j]+i-128);//Be sure to wrap rotation
+
+			cout << out;
+		}
+		cout << "\n\n***Rotation: " << i << "***\n" << endl;
+	}
+	return 0;
+}

@@ -1,0 +1,44 @@
+Hyper Text Transfer Protocol
+Sir Tim Berners Lee (1955-) was the inventor of the "web," an internet application.
+A Page can be viewed as a set of HTTP transactions (request and response).
+
+Fetching a webpage:
+1) Resolve the ip (DNS)
+2) Set up TCP connection to server
+3) Send HTTP request for the page and await response
+4) Render page
+5) Clean up idle TCP connections
+
+Static vs Dynamic webpage.
+Static page does not change.
+Dynamic page runs php or javascript or executes some other program.
+
+HTTP Evolution:
+0.9 - very early
+1.0 - developed, uses cookies
+1.1 - persistent connections
+2.0 - SPDY attempts better security
+
+Originally a very simple protocol with many additional options over time
+
+There are some codes like 403 or 404, which communicate different things to the client.
+There are multiple headers for HTTP as well.
+
+Performance:
+Page Load Time (PLT) is the key measure of web performance. It is measured from the time the user clicks untill he sees the full page.
+Network response time and bandwidth are also important.
+
+Early Performance:
+HTTP/1.0 uses one TCP connection to fetch one web resource.
+This made HTTP very easy to build, but gave poor PLT.
+
+Ways to decrease PLT:
+1) Reduce content size
+2) Change HTTP to utilize bandwidth more effectively
+3) Change HTTP to avoid repeated transfers
+4) Move content closer to client
+
+Simple way to reduce PLT:
+Browser can run multiple connections in parallel.
+Persistent connections can be used so that there is no overhead in connection time.
+Pipelining requests can also increase effeciency.

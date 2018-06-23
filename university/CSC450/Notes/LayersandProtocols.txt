@@ -1,0 +1,86 @@
+What is Layering?
+Layering is a modular approach to network functionality.
+Example of Layers:
+Hardware Link; Host-to-host connectivity; Application-to-application channels; Application itself
+
+Layering Characteristics:
+-Each layer relies on services from below and exports services to layer above
+-Interface defines interaction with peer on other hosts
+-Hides implementation (can change without affecting other layers)
+
+Is layering harmful?
+-A layer may duplicate lower layer functionality
+-Layers made need same info
+-Strict adherence could cause an overhead
+-Some layers are not cleanly separated
+-Interfaces may not be standardized
+
+What are Protocols?
+Protocols are agreements between parties on how communication should take place.
+
+Protocols define:
+-Inteface to higher layers
+-Interface to peer, such as actions taken upon receipt of a message, format & order of messages, and error handling
+
+OSI Model (7 protocol layers):
+Physical: transmit bits
+Data link: transmit frames (collections of bits)
+Network: route packets
+Transport: send packets end-to-end
+Session: tie flows together
+Presentation: byte order & security
+Application: everything else
+
+TCP/IP has been amazingly successful, but it is not based on the OSI model.
+
+IP Layering (5 protocol layers):
+Physical
+Data link
+Network
+Transport
+Application
+
+Multiplexing and Demultiplexing:
+-There may be multiple implementations of each layer
+-Each header includes a demultiplexing field that is used to identify the next layer
+
+Goals in Clark'88:
+Connect existing networks
+Survivability
+Support multiple types of services
+Must accommodate a variety of networks
+Allow distributed management
+Allow host attachment with a low level of effort
+Be cost effective
+Allow resource accountability
+
+Connecting Networks:
+Many differences between networks, such as address formats, performance, packet size, loss rate/pattern/handling, routing
+The first two bytes of an ip are the Network ID
+The second two bytes of an ip are the Host ID.
+The ip also requires a port to connect to an application within the host.
+To fix addressing issues, everyone uses a common format.
+To fix packet size issues, fragmentation and re-assembly is implmented. Typically, fragmentation occurs on the sender, and re-assembly occurs at the receiver.
+
+Survivability:
+If network is disrupted or reconfigured, the communicating entities do not care.
+There is no higher-level state reconfiguration.
+"Fate sharing" is the idea that every intermidiary node has information about the communicating hosts. This brings in lots of overhead.
+Soft-state fate sharing; a host announces its state when sending a packet. There is a timeout and a refresh state.
+End-to-end argument; where to place functionality. Many functions can only be correctly implemented by the endpoints.
+
+Types of Services:
+The networks treat all packets the same way.
+Relativily simple core network elements.
+TCP and UDP; elastic apps need reliability, can use TCP
+Inelastic apps that are loss-tolerant (like video calls) typically use UDP.
+
+Decentralization:
+Each network should be owned and managed separately
+Unwritten rule of "Send conservatively, receive liberally"
+
+Accountability:
+Accounting, like billing proccesses and inter-ISP payments.
+Security, dealing with malware, authentication, and greedy services
+
+

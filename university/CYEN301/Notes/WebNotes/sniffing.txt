@@ -1,0 +1,21 @@
+what we need:
+	ettercap
+	wireshark
+	
+start ettercap to arp poison all nodes in the network so we can receive their traffic
+this basically tells the network that we are identified as everyone else
+when a node wants to send a message to another node, it asks who has the target IP (and to tell that node who has it)
+this message is broadcasted to all nodes in the network
+the node who has that IP responds with its MAC address (it's me!)
+we are simply injecting messages in the network that says that we are all MAC addresses
+the network, in its attempt to be redundant and robust, simply sends messages intended for a destination to everyone that claims it's that destination!
+$ ettercap -Tq -i wlan3 -V hex -M arp:remote //
+
+it attempts to scan all nodes in the network (some will show, some won't)
+this ARP poisons everyone in the network (it's essentially a nice man-in-the-middle attack)
+this will also allow us to start sniffing
+
+in another terminal, we also run wireshark since it's a bit more user friendly and powerful
+$ sudo wireshark
+
+to quit ettercap, press q

@@ -1,0 +1,111 @@
+/*
+ *Page Background: AAB4AA;
+ *Text Background: 223222;
+ *
+ */
+
+body 
+{
+	background-color: #AAB4AA;
+}
+
+
+/*******HEADING***********/
+#heading h1 
+{
+	color: #223222;
+	text-shadow: 2px 2px #223322;
+	padding-left: 4em;
+	padding-top: 1.5em;
+	display:inline;
+}
+
+#heading img
+{
+	height: 6em;
+	width: 6em;
+	padding-top: 1em;
+	padding-left: 30em;
+	display:inline;
+}
+
+/******DIVIDER**********/
+#divider
+{
+	margin-top: .1em;
+	background-color: #223222;
+}
+
+/******MAIN BODY********/
+#main ul
+{
+	color: #223222;
+	text-shadow: .5px .5px #223322;
+	list-style-type: none;
+	width: 20%;
+	float: left;
+}
+
+#main p
+{
+	color: #223222;
+	text-shadow: .5px .5px #223322;
+	padding-left: 15em;
+	padding-right: 3em;
+}
+
+#main form
+{
+	padding-left: 15em;
+	padding-right: 3em;
+}
+
+#main table
+{
+	padding-left: 15em;
+	padding-right: 3em;
+}
+
+#main th
+{
+	color: #223222;
+	padding-left: 4em;
+	padding-top: 1.5em;
+}
+
+#main td
+{
+	color: #223222;
+	padding-left: 4em;
+	padding-top: 1.5em;
+}
+
+#main .topp
+{
+
+	padding-top: 3em;
+}
+
+#main li
+{
+	padding-left: 2em;
+}
+
+#main a
+{
+	color: #223222;
+}
+
+#main a:hover
+{
+	font-weight: bold;
+}
+
+#main .topiclist
+{
+	width: 80%;
+	padding-left: 15em;
+	padding-right: 3em;
+	list-style-type: disc;
+	text-shadow: none;
+}

@@ -1,0 +1,83 @@
+Local Area Networks (LAN)
+-Lower Cost
+-Short Distance = faster links, lower latency
+-One Management Domain
+-More Homogenous
+Examples are: Ethernet, Token Ring, FDDI, 802.11 wireless
+
+Multiplexing (A selected broadcast)
+-Need to share network resources. How? Using a switched network
+	-Party A gets resources sometimes
+	-Party B gets resources sometimes
+-Interior nodes act as switches
+
+Circuit Switching
+-Source first establishes a connection
+	-Each switch along the way stores information about the connection
+-Source sends the data over the circuit
+-Connection is explicitly torn down
+Pros: Fast and predicatable
+Cons: Lots of users with "bursty" traffic, differing bandwith needs
+
+Packet Switching: built on Circuit switching
+-Source sends information as self contained packets with an address and may have to break up the full message
+-Each packet travels independently to the destination host
+-Very efficient and general. Accomadtes "bursty" traffic. Store and forward.
+
+Congestion and Delays
+-Keep in mind: Efficiency, Reliability, Management, Security, and Scalability
+-Ease of creation and deployment is also important
+
+Challenges of Networks
+-Geographic scope (Internet vs LAN)
+-Scale (Internet vs Home Network)
+-Application Types (Email vs Video Conferencing)
+-Trust and Administration (Corporate network-one network provider)
+
+Internet
+-An internet is a network of networks, while the Internet is the set of inconnected networks of the ISPs
+
+Heterogeneity
+-Address Formats
+-Performance
+-Packet Size
+-Loss rate/handling
+-Routing
+-Diverse network technologies, as in ways to link
+
+Internet Challenges
+-Scale
+	100,000,000s of hosts
+	17,000+ ISPs, with new applicants each day
+-Adversarial environment
+
+Internet Design
+-In order to inter-operate, all participating networks have to follow a common set of rules, for example, packet format
+-Naming and routing nodes is important
+-A DNS server converts URL addresses to ip address
+-Routers are sensitive to bandwidth, and will route accordding to congestion.
+
+Network Service Model
+-Packets can get lost
+-A good network is sensitive to QoS (Quality of Service)
+-Reliability issues such as corruption and lost packets must be accounted for
+-Congestion Control
+-Fragmentation
+-In-order Delivery
+
+Fitting Data
+-Max packet size is 1.5 KB
+-Solution? Fragment data across packets, and label with sequence number
+
+Networks implement many functions
+-Link
+-Multiplex
+-Routing
+-Addressing/naming
+-Reliablity
+-Flow Control
+-Fragmentation
+
+Metting Application Demands
+-Sometimes interior if the network can do it
+-Also could be on the host end

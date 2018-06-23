@@ -1,0 +1,3 @@
+Compile each of these source codes with g++
+Remeber to use flag -lpthread when compiling those which contain pthreads.
+Notice that the programs which do no call forked processes end after the exec call, even though they contain a while(1); infinite loop.

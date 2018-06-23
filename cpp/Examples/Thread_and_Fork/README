@@ -1,0 +1,6 @@
+Compile each of these source codes with g++
+Remeber to use flag -lpthread when compiling those which contain pthreads.
+Notice that the programs which do no call forked processes end after the exec call, even though they contain a while(1); infinite loop.
+As pthread_example.cc shows, however, threads will not close their parents.
+Forks will not close their parents either, but are used for exec functions because exec closes the process that called it.
+The thread, while technically running in parallel, is seen as the same process as its parent by the OS, and therefore closes the whole program by calling exec functions.

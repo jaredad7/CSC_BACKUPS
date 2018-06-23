@@ -1,0 +1,11 @@
+4/14/14
+
+DHCP automates assigning ip addresses.
+I can tell my router to give only ip's starting at 192.168.1.100 and only allow up to 50 connections.
+Then, I can create static ip addresses below this value on the network.
+We can beat MAC filtering (setting up your network to only allow certain mac addresses) can be beaten 
+by going into promiscuous mode and sniffing packets for hardware addresses, then changing yours to match one
+that is on the network.
+
+Hiding SSID: a program called Kismet can find more information from your router if it is hidden because being
+hidden forces more information to be sent between machines.

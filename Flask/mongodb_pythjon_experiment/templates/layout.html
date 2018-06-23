@@ -1,0 +1,15 @@
+<head>
+	<title>My Test App</title>
+	<link rel=stylesheet type=text/css href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+	<div id="heading">
+		{% block heading %}{% endblock %}
+	</div>
+	<div id="divider">
+		<br>
+	</div>
+	<div id="main">
+		{% block main %}{% endblock %}
+	</div>
+</body>

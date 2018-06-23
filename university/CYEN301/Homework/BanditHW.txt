@@ -1,0 +1,92 @@
+		************************************************
+		Bandit Game completion process for Jared Dembrun
+		************************************************
+
+		The levels are listed below along with their completion requirements.
+
+Bandit0:
+Begin with the command ssh bandit0@bandit.labs.overthewire.org
+The password is bandit0
+
+Bandit1:
+In the bandit0 user's home directory, there is a file called readme
+cat this file to get the password for bandit1, which will be used when you type the command ssh bandit1@bandit.labs.overthewire.org
+The password is boJ9jbbUNNfktd78OOpsqOltutMc3MY1
+
+Bandit2:
+In the bandit1 user's home directory, there is a file called -
+cat this file to get the password for bandit2, which will be used when you type the command ssh bandit2@bandit.labs.overthewire.org
+When concatenating this file, type cat ./- so that cat sees it as a file rather than an empty flag.
+The passwird is CV1DtqXWVFXTvM2F0k09SHz0YwRINYA9
+
+Bandit3:
+In the bandit2 user's home directory, there is a file called 'spaces in this filename'
+cat this file to get the password for bandit3, which will be used when you type the command ssh bandit3@bandit.labs.overthewire.org
+When concatenating this file, type cat spaces\ in\ this\ filename. The backslashes let cat know that these are spaces in the filename rather than pieces of another command or options for cat.
+The passwird is UmHadQclWmgdLOKQ3YNgjWxGoRMb5luK
+
+Bandit4:
+In the bandit3 user's home directory, there is a directory named inhere, which contains a hidden file, .hidden.
+This can be shown using ls -a.
+cat this file to get the password for bandit4, which will be used when you type the command ssh bandit4@bandit.labs.overthewire.org
+The password is pIwrPrtPN36QITSp3EQaw936yaFoFgAB
+
+Bandit5:
+In the bandit4 user's home directory, there is a directory named inhere, which contains 10 files, -file00 through -file09
+Only -file07 contains a human readable text. This is the password to Bandit5, which will be used when you type the command ssh bandit5@bandit.labs.overthewire.org
+The password is koReBOKuIDDepwhWk7jZC0RTdopnAYKh
+
+Bandit6:
+In the bandit5 user's home directory, there is a directory called inhere which contains many maybehere directories.
+Use the find command to search recursively for a file of 1033 bytes (the value given by the creators as the proper filesize for the file containing the password)
+cat this file (maybehere07/.file2) to get the password for bandit6, which will be used when you type the command ssh bandit6@bandit.labs.overthewire.org
+The password is DXjZPULLxYr17uwoI01bNLQbtFemEgo7
+
+Bandit7:
+This file may be anywhere on the server. It is owned by bandit7, is in group bandit6, and is 33 bytes.
+This command finds the file (it is the only one without a permission denied error) find / -user bandit7 -group bandit6 -size 33c
+cat this file for the password, which will be used when you type the command ssh bandit7@bandit.labs.overthewire.org
+The password is HKBPTKQnIay4Fw76bEy8PVxKEDQRKTzs
+
+Bnadit8:
+The password is said to be in a file datat.txt next to the word millionth.
+This command finds the correct line and prints it out, using grep and a pipe in addition to cat: cat data.txt | grep millionth
+This password will be used when you type the command ssh bandit8@bandit.labs.overthewire.org
+The password is cvX2JJa4CFALtqS87jk27qwqGhBM9plV
+
+Bandit9:
+The password is said to be the only password in the file which occurs only once.
+This command sorts the lines and then uses uniq to print the only unique line in the file: sort data.txt | uniq -u
+This password will be used when you type the command ssh bandit9@bandit.labs.overthewire.org
+The password is UsvVyFSfZZWbi6wgC7dAFyFuR6jQQUhR
+
+Bandit10:
+The password is said to be in data.txt as a human-readable text on a line beginning with '='.
+This command prints only char sequences of at least 4 bytes which are then followed by an unprintable (in other words, it only prints huan-readable characters). By using it, we can see that only three lines begin with '=': strings data.txt
+Process of elimination can quickly determine the password, which will be used when you type the command ssh bandit10@bandit.labs.overthewire.org
+The password is truKLdjsbJ5g7yyJ2X2R0o3a5HQJFuLk
+
+Bandit11:
+The password is said to be in a base64 encoded file called data.txt.
+This command decodes the encryption: base64 -d data.txt
+The password will be used when you type the command ssh bandit11@bandit.labs.overthewire.org
+The password is IFukwKGsFW8MOq3IRFqrxE1hxTNEbUPR
+
+Bandit12:
+The password is said to be in data.txt and rotated by 13 places.
+This is an Ancient Roman form of cryptography called Rot13 (wikipedia).
+The tr command can be used in the following way to do or undo the Rot13 encryption: cat data.txt | tr a-zA-Z n-za-mN-ZA-M
+The password will be used when you type the command ssh bandit11@bandit.labs.overthewire.org
+The password is 5Te8Y4drgCRfCx8ugdwuEX8KFC6k2EUu
+
+Bandit13:
+Just... no.
+You have to do so many things, including bzips, tars, it's ridiculous.
+Eventually, you get the password: 8ZjyCRiBWFYkneahHwxCv3wb2a1ORpYL
+
+Bandit14:
+No password required. We use a private ssh key to login to bandit14@localhost. This password can then be obtained, but is not needed, as we are already in bandit14 user: 4wcYUJFw0k0XLShlDzztnTBHiqxU3b3e
+
+Bandit15:
+We are told that the password for this level can be obtained by submitting the password for the current level to port 30000.
+The following command reveals the password:

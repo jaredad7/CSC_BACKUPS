@@ -1,0 +1,46 @@
+4/28/2014
+Steganography: The hiding of something within something else (essentially)
+
+Bitmaps and wav files are good for hiding things becuase they are large files. However, it will likely be extremely noticable
+
+Things can be hidden in plain site with things like:
+
+null ciphers (a certain letter in each word or every other word or any things at this level of simplicity represent the message)
+microdot (hiding text in a small dot so you need a microscope to see it)
+watermarking (both visible and invisible)
+
+#########
+
+Message vs. container:
+
+The container must be (considerably) larger than the message (duh!)
+
+JPG's, MP3's, and other compressed files, are much more difficult to use for steg.
+
+#########
+
+Replacing bytes with messages:
+offset = be sure you skip the header
+interval = distance between message components used to hide the message
+
+#########
+
+Replacing bits with messages:
+Replace 8 bits over 8 bytes instead of whole bytes at a time.
+If we replace the most insignificant bit, our senses will likely not catch the difference.
+This will make the concealed message much less detectable
+
+To get the bit in a certain position, shift right 7 and & the value with the value of 1.
+b >> 7 & 1
+
+To store the bit, and the container byte with all 1's and a zero in the last place (254?)
+Then, or with message byte
+c & 254 | b
+ 10110111 -container byte
+&11111110
+ 10110110 -container byte with null last bit
+|00000001
+ 10110111 -final byte containing message in least significant bit
+
+To extract the original message, and container with 1, then shift left by 1
+c &1 << 1

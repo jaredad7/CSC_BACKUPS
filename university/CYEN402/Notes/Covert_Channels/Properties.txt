@@ -1,0 +1,12 @@
+Properties of Covert Channels:
+-Capacity (Bandwidth)
+-Covertness (detectability)
+-Existence
+
+Prevention of a covert channel is very difficult in general systems.
+Reducing the effectivness of the channel discourages its use, and makes monitoring unnecessary.
+
+Network Covert Channels:
+Uses network traffic
+Emergence of high speed communication channels has meant the potential for higher capacity channels.
+

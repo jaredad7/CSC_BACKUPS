@@ -1,0 +1,18 @@
+{% extends "layout.html" %}
+{% block heading %}
+	<h1>Data</h1>
+{% endblock %}
+{% block main %}
+	<table>
+		<tr>
+			<th>Timestamp</th>
+			<th>Value</th>
+		</tr>
+		{% for datum in data %}
+			<tr>
+				<td>{{ datum.timestamp }}</td>
+				<td>{{ datum.data }}</td>
+			</tr>
+		{% endfor %}
+	</table>
+{% endblock %}

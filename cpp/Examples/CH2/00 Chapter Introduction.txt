@@ -1,0 +1,18 @@
+This is Chapter 2 of the C++ beginner's tutorial by Jared Dembrun.
+In this Chapter, we will learn about objects and object-oriented programming. We will also
+talk about some data types.
+Lessons will be done in much the same way as in Chapter 1.
+
+Here we will discuss what a class is. A class is a device used in Computer Science to represent objects in
+Object Oriented programming, but what is object oriented programming?
+
+Object Oriented Programming, or OOP, is the abstraction of ideas into "objects", which allow us to use much
+more powerful functions in order to make more complex programs. For example, a racing video game would have
+many cars in it. Each of these cars is a distinct object, but they probably all share the same class (the car class).
+
+So, now, when we have many distinct versions of the same object, we can represent them as instances of the same class.
+
+You have already used classes in chapter 1. The vector is a class, and you create a vector object each time you make
+a new vector. Strings are also objects in C++.
+
+We will also learn about some types of data structures in this chapter, employing OOP to build our own.

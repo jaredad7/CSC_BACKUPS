@@ -1,0 +1,19 @@
+Access Control is the heart of security. 
+We need the ability to allow only authorized entities (users, programs, processes, etc) to access resources.
+
+Policy Models: Configuration and Management
+DAC-Discretionary Access Control
+	An individual user can set an access control mechanism to allow or deny access to an object.
+	Relies on owner to control access.
+	Strengths: Flexibility
+	Weaknesses: Control is done in broad rules, no fine control
+	Key Concepts: File and Data Ownership; Access Rights
+MAC-Mandatory Access Control
+	A system-wide policy decrees who is allowed to access; individuals cannot alter that access.
+	Relies on system to control access.
+
+Mechanism: How Control is Implemented
+Matrices
+Lists
+Capabilities
+Role-Based

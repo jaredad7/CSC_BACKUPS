@@ -1,0 +1,25 @@
+3/17/14
+
+Lookup tutorials on WEP or WPA/WPA2 cracking
+
+Check with aircrack-ng that wireless card can do promiscuous mode and can inject packets.
+
+At Cyberstorm, we need 4 OS's
+2 Linux
+1 Windows
+1 BSD
+
+Each OS needs 4 servers running on it:
+Web, MySQL, FTP, and SSH
+
+***************************************************************************
+
+Hypervisor - software to run several virtual machines
+ex: vmware, virtualbox, xen, parallels, proxmox
+
+host os, hypervisor is app on top, inside hypervisor are virtual machines
+have to lock down host, only want connections to virtual machines
+just shut down networking in host os
+use virtualbox ose (open source edition)
+
+ARP (Address Resolution Protocl) tables... Read about them!!!

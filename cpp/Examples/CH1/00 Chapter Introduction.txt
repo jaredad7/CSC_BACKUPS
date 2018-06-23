@@ -1,0 +1,25 @@
+Thank you for downloading this first tutorial on C++.
+There are 8 introductory-level lessons in this chapter, followd by two practice lessons and a programming challenge at the end.
+Each lesson is a compilable source code file with extensive commenting to explain the nature of the code.
+After reading the file, compile it to see what it does.
+Try changing some code around and see if things change.
+
+If you are runing a Windows PC, you will likely need to download a compiler for c++.
+I recommend using one of these three IDE's (Integrated Development Environments):
+
+http://www.eclipse.org/downloads/packages/eclipse-ide-cc-developers/heliossr2
+
+http://www.codeblocks.org/downloads
+
+http://www.bloodshed.net/dev/devcpp.html
+
+If you are running a UNIX/LINUX machine, then you probably already know that your OS comes with some pretty nice default text editors.
+If you have none, try installing: vim, vi, emacs, or gedit.
+If you do not have the command g++ installed, you will need to learn how to install it on your particular OS.
+If you want to use an IDE, there are UNIX/LINUX versions available for all three listed above.
+If you using a Mac, it is running an OS based on UNIX.
+
+If you have any questions or comments, please feel free to email me about them at jaredad7.jd@gmail.com.
+
+**DISCLAIMER: The lessons provided in this set are meant to be supplementary to individual research or education.
+The lessons provided only scratch the surface of the c++ language with practical, pre-written examples of source code.

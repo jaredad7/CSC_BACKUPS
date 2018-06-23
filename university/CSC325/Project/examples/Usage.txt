@@ -1,0 +1,3 @@
+Below is the default dictionary value for electronic cookbook:
+
+{'Usage': ['Ingredients go here.', 'Instructions go here. Type "list" into the title bar and search to get a List of all available recipes by title. Then, type a title into the title bar to retrieve the corresponding recipe. Or, type up a new recipe and save it. You can also edit saved recipes by re-saving them.']}

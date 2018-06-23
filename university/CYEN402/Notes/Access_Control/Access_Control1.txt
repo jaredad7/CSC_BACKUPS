@@ -1,0 +1,9 @@
+Kinds of access:
+Physical access [Keyfob, Card access, Finger print, etc]
+Cyber access [Access via a network connection]
+
+Access Control Models:
+Attribute-Based [Based on the rights of an authenticated subject/user]
+Discretionary [Owner decides who has access]
+Mandatroy [A much stricter version of Discretionary Control]
+Rule-Based [Similar to Mandatory, but even stricter in some senses]

@@ -1,0 +1,14 @@
+Your challenge for this Chapter is to design a program with which a user can play Tic-Tac-Toe.
+There should be an option to play against the computer or against another human.
+The program should only accept proper input, and should loop until proper input is received.
+The board should be displayed in "ASCII ART", as shown below:
+
+| x | o | o |
+|   | x |   |
+|   | x | o |
+
+**Hint: you should save the state of the board in an array or a vector.
+**Hint: while loops and for loops are very useful, especially for programing games.
+
+Good luck. This should be mildly challenging if you have been paying attention, and if you have completed the practice lessons.
+Look back at lessons for examples, and don't hesitate to ask questions if you get stuck.
